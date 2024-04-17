@@ -15,7 +15,7 @@ function updateSubtotal(product) {
   // Paso 3: Ahora función para calcular el subtotal, es decir multiplicar el precio por la cantidad:
   const subtotalPrice = priceValue * quantityValue;
   // Paso 4: Obtener el elemento donde se mostrará el subtotal, el que contenga la clase "subtotal":
-  const subtotalElement = product.querySelector(".subtotal"); // Había puesto document.querySelector y entonces solo me cambiaba el subtotal del primer producto. Con el product me aseguro de que cada producto tenga un subtotal.
+  const subtotalElement = product.querySelector(".subtotal span"); // Había puesto document.querySelector y entonces solo me cambiaba el subtotal del primer producto. Con el product me aseguro de que cada producto tenga un subtotal.
   // Paso 5: Establecer el precio subtotal en el elemento del DOM:
   subtotalElement.textContent = subtotalPrice;
   // Devolver el valor del subtotal:
