@@ -39,18 +39,24 @@ function calculateAll() {
   // ITERATION 2
   // Obtener todos los nodos tr con la clase product
   const productRows = document.getElementsByClassName("product");
-let total = 0;
+  let total = 0;
   // Iterar sobre cada nodo tr.product y llamar a updateSubtotal() para cada uno
   for (let i = 0; i < productRows.length; i++) {
     total += updateSubtotal(productRows[i]);
   }
 
-  // ITERATION 3 --> CALCULAR EL TOTAL DE LA COMPRA
-    // Obtener el elemento del DOM para el total
-    const totalElement = document.querySelector("#total-value");
+  /* Si quisiera hacerlo con un forEach:
+    Array.from(productRows).forEach(function(productRow) {
+    total += updateSubtotal(productRow);
+    });
+ */
 
-    // Actualizar el contenido del elemento del DOM para mostrar el total
-    totalElement.textContent = total;
+  // ITERATION 3 --> CALCULAR EL TOTAL DE LA COMPRA
+  // Obtener el elemento del DOM para el total
+  const totalElement = document.querySelector("#total-value");
+
+  // Actualizar el contenido del elemento del DOM para mostrar el total
+  totalElement.textContent = total;
 }
 
 // ITERATION 4
