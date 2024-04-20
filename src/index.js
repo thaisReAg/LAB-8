@@ -53,8 +53,7 @@ function calculateAll() {
 
   // ITERATION 3 --> CALCULAR EL TOTAL DE LA COMPRA
   // Obtener el elemento del DOM para el total
-  const totalElement = document.querySelector("#total-value");
-
+  const totalElement = document.querySelector("#total-value span");
   // Actualizar el contenido del elemento del DOM para mostrar el total
   totalElement.textContent = total;
 }
